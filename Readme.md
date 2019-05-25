@@ -30,6 +30,8 @@ Updates the last date viewed and visits.
 Output fromat(JSON) -
 {'status': 'success/Failed', 'long_url':'if error occurs this field is not present', 'msg':'stating what happened during the execution'}
 
+URL invalidator - 
+ Checks which URL hasn't been used for more than 30 days and sets them as inactive.
 
 
 DataBase -
