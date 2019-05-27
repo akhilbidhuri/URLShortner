@@ -23,7 +23,6 @@ This end point accepts the original long URL.
 It first checks whether the URL already exists in database and is active the just tells that the URL already exists in database and returns the short url.
 If the URL exists in data base and is active it updates its status to active and returns the short url.
 If the URL is not in data base it generates a short url and inserts the record into the database and returns the short url.
-It also stores the params in the URL to be used while getting the orignal url anb making the url dynamic.(Bonus task)
 '''
 @app.route('/getShort', methods=['POST'])
 def getShort():
@@ -71,7 +70,8 @@ def getShort():
 This endpoint is called when a the original URL is required from the short URL.
 It first checks whether thre URL exists in database and is active if so return the long URL.
 If not active return the status not acitve.
-If dosen't exist in data base return status dosen't exist. 
+If dosen't exist in data base return status dosen't exist.
+If token values are passed in the short_url input it takes those token values and dynamicaaly generates the URL with querystring
 '''
 @app.route('/getLong', methods=['POST'])
 def getLong():
